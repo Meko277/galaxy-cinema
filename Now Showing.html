@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galaxy Cinema</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      
+
+      body {
+        background-color: rgb(0, 23, 18);
+        color: #fff;
+      }
+      
+      /* Header */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+      width: 100%;
+      padding: 30px 0;
+      text-align: center;
+      background: rgba(10, 10, 10, 0.95);
+      box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+      z-index: 100;
+      transition: all 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      backdrop-filter: blur(5px);
+    }
+    
+    header h1 {
+      color: #ffcc00;
+      font-size: 2.6em;
+      margin: 0;
+      letter-spacing: 2px;
+      transition: all 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      position: relative;
+    }
+    
+    header.shrink h1 {
+      font-size: 1.3em;
+      position: absolute;
+      right: 25px;
+      top: 12px;
+      transform: translateY(0);
+    }
+    
+    header.shrink {
+      padding: 10px 20px;
+      background: rgba(10, 10, 10, 0.6);
+      box-shadow: 0 3px 8px rgba(255,255,255,0.1);
+    }
+    
+    header.fade {
+      background: rgba(10, 10, 10, 0.3);
+      backdrop-filter: blur(2px);
+    }
+    
+    nav {
+      margin-top: 15px;
+      transition: all 0.8s ease;
+    }
+    
+    header.shrink nav {
+      opacity: 0.6;
+      transform: translateY(-8px);
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    nav a:hover {
+      color: #ffcc00;
+    }
+    
+    /* Movies Section */
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    h2 {
+      text-align: center;
+      margin-top: 120px;
+      margin-bottom: 60px;
+      color: #ffcc00;
+      font-size: 1.8em;
+    }
+    
+    .movies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+    }
+    
+    .movie {
+      background-color:blur(5px);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      transition: transform 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+    
+    .movie:hover {
+      background: #111, blur(5px);
+      transform: scale(1.05);
+      
+    }
+    
+    .movie img {
+        background: #111, blur(5px);
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    
+    .movie-info {
+      background: #111, blur(5px);
+      padding: 20px;
+      
+    }
+    
+    .movie-info h3 {
+      background: #111, blur(5px);
+      margin-bottom: 10px;
+      color: #ffcc00;
+      
+    }
+    
+    .movie-info p {
+      background: #111, blur(5px);
+      font-size: 0.9em;
+      color: #ccc;
+      
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #111 ,blur(5px);
+      text-align: center;
+      padding:    50px;
+      color: #888;
+      margin-top: 40px;
+      
+    }
+
+    footer p {
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header id="mainHeader">
+  <h1 id="cinemaTitle">🎬 Galaxy Cinema</h1>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="Now Showing.html">Now Showing</a>
+      <a href="Coming Soon.html">Coming Soon</a>
+      <a href="Tickets.html">Tickets</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Now Showing</h2>
+    <div class="movies">
+      <div class="movie">
+        <img src="images/bank_alhaz.png" alt="Movie 1" />
+        <div class="movie-info">
+          <h3>بنك الحظ</h3>
+          <p>بعد فصل محمد صالح (محمد ممدوح) من البنك الذي يعمل به بسبب تجاوزاته المستمرة في حق العملاء، يقرر التحالف مع عمرو (أكرم حسني) زميله في البنك، وزئرو (محمد ثروت) شريكهما في محل ألعاب البلاي ستيشن</p>
+        </div>
+      </div>
+
+      <div class="movie">
+        <img src="images/a_stand_of_worthy_men.jpg" alt="Movie 2" />
+        <div class="movie-info">
+          <h3>وقفه رجاله</h3>
+          <p>يجتمع مجموعة من الأصدقاء بعد سنوات لمساعدة أحدهم في الخروج من أزمة نفسية لوفاة زوجته، وتتطوّر الأحداث فتقودهم للسفر إلى إحدى المدن الساحلية.</p>
+        </div>
+      </div>
+
+      <div class="movie">
+        <img src="images/the_cell.jpeg" alt="Movie 3" />
+        <div class="movie-info">
+          <h3>الخلية</h3>
+          <p>(سيف) ضابط عمليات خاصة، يتصدي لإرهابي اسمه (مروان)، وأثناء هذه العملية يستشهد ضابط العمليات الخاصة (عمرو)، ويصاب (سيف) نتيجة إنفجار قنبلة بجانبه، فيقسم (سيف) أن يعود ليثأر لحق (عمرو)،.</p>
+        </div>
+      </div>
+
+      <div class="movie">
+        <img src="images/the_project_x.png" alt="Movie 4" />
+        <div class="movie-info">
+          <h3>المشروع X</h3>
+          <p>>يعمل عالم آثار على مشروع متعلق بالطاقة في غرفة سرية بالهرم الأكبر، ليدخل بعدها في صراع مع منظمة دولية غامضة تحاول إخفاء المعلومات التي يبحث عنها، ويتقاطع طريقه مع عدة أشخاص يستعين بهم خلال رحلته..</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer>
+    <p>© 2025 Galaxy Cinema | Designed by Mark Tamer</p>
+  </footer>
+
+  <script>
+    const header = document.getElementById('mainHeader');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 80) {
+        header.classList.add('shrink');
+      } else {
+        header.classList.remove('shrink');
+      }
+
+      if (scrollY > 250) {
+        header.classList.add('fade');
+      } else {
+        header.classList.remove('fade');
+      }
+    });
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinematic Background</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      height: 100vh;
+      overflow: hidden;
+      cursor: none; /* optional cinematic effect */
+    }
+
+    /* Camera container */
+    .camera {
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      width: 450px;
+      height: auto;
+      pointer-events: none;
+    }
+
+    /* Lens highlight (fake glowing dot that follows mouse) */
+    .lens-light {
+      position: fixed;
+      width: 35px;
+      height: 35px;
+      background: radial-gradient(circle, rgba(255,255,255,0.9), rgba(255,255,255,0.05));
+      border-radius: 50%;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      transition: transform 0.1s linear;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Camera Image -->
+  <img src="camera.png" class="camera" id="camera">
+
+  <!-- Fake light reflection following the mouse -->
+  <div class="lens-light" id="lensLight"></div>
+
+  <script>
+    const camera = document.getElementById("camera");
+    const lensLight = document.getElementById("lensLight");
+
+    window.addEventListener("mousemove", (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+
+      // Position of camera
+      const camRect = camera.getBoundingClientRect();
+      const camCenterX = camRect.left + camRect.width / 2 - 70; // adjust lens X
+      const camCenterY = camRect.top + camRect.height / 2 - 30; // adjust lens Y
+
+      // Move lens light to follow mouse
+      lensLight.style.transform = `translate(${mouseX - 15}px, ${mouseY - 15}px)`;
+
+      // Calculate rotation angle
+      const angle = Math.atan2(mouseY - camCenterY, mouseX - camCenterX) * (180 / Math.PI);
+
+      // Rotate the camera smoothly
+      camera.style.transform = `rotate(${angle}deg)`;
+    });
+  </script>
+
+</body>
+</html>

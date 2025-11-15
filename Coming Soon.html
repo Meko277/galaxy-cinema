@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galaxy Cinema | Coming Soon</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: rgb(0, 23, 18);
+      color: #fff;
+    }
+
+    /* Header */
+    /* Header */
+header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px 0;
+      text-align: center;
+      background: rgba(10, 10, 10, 0.95);
+      box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+      z-index: 100;
+      transition: all 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      backdrop-filter: blur(5px);
+    }
+
+header h1 {
+      color: #ffcc00;
+      font-size: 2.6em;
+      margin: 0;
+      letter-spacing: 2px;
+      transition: all 0.9s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      position: relative;
+    }
+
+header.shrink h1 {
+      font-size: 1.3em;
+      position: absolute;
+      right: 25px;
+      top: 12px;
+      transform: translateY(0);
+    }
+
+nav {
+      margin-top: 15px;
+      transition: all 0.8s ease;
+    }
+
+header.shrink nav {
+      opacity: 0.6;
+      transform: translateY(-8px);
+    }
+header.shrink {
+      padding: 10px 20px;
+      background: rgba(10, 10, 10, 0.6);
+      box-shadow: 0 3px 8px rgba(255,255,255,0.1);
+    }
+ header.fade {
+      background: rgba(10, 10, 10, 0.3);
+      backdrop-filter: blur(2px);
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* Section */
+    section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 110px;
+      margin-bottom: 60px;
+      color: #ffcc00;
+      font-size: 2em;
+    }
+
+    /* Movie Grid */
+    .movies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .movie {
+      background-color: #1a1a1a;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .movie:hover {
+      transform: scale(1.05);
+    }
+
+    .movie img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+
+    .movie-info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .movie-info h3 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    .movie-info p {
+      color: #ccc;
+      font-size: 0.9em;
+      margin-bottom: 8px;
+    }
+
+    .release-date {
+      color: #00ffcc;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px;
+      color: #888;
+      margin-top: 40px;
+    }
+    
+    footer p {
+      font-size: 0.9em;
+    }
+    </style>
+</head>
+<body>
+  <header id="mainHeader">
+    <h1 id="cinemaTitle">🎬 Galaxy Cinema</h1>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="Now Showing.html">Now Showing</a>
+      <a href="Coming Soon.html">Coming Soon</a>
+      <a href="Tickets.html">Tickets</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+  
+  
+  <section>
+    <h2>🎞️ Coming Soon — Egyptian Movies</h2>
+    <div class="movies">
+      <div class="movie">
+        <img src="images/playing_with_children.jpg" alt="Movie 1" />
+      <div class="movie-info">
+          <h3>اللعب مع العيال</h3>
+          <p>A new Egyptian comedy starring Ahmed Helmy — full of chaos and laughter.</p>
+          <p class="release-date">Coming January 2026</p>
+        </div>
+      </div>
+
+      <div class="movie">
+        <img src="images/blue_elefant_III.jpg" alt="Movie 2" />
+        <div class="movie-info">
+          <h3>الفيل الأزرق 3</h3>
+          <p>The mysterious story continues with new psychological twists and secrets.</p>
+          <p class="release-date">Coming March 2026</p>
+        </div>
+      </div>
+      
+      <div class="movie">
+        <img src="images/135355-كازابلانكا-(2).jpg" alt="Movie 3" />
+        <div class="movie-info">
+          <h3>كازابلانكا 2</h3>
+          <p>Action returns with Amir Karara in a thrilling new international adventure.</p>
+          <p class="release-date">Coming April 2026</p>
+        </div>
+      </div>
+
+      <div class="movie">
+        <img src="images/rezk_childs.jpg" alt="Movie 4" />
+        <div class="movie-info">
+          <h3>ولاد رزق 3</h3>
+          <p>The brothers are back for one last heist — full of danger, loyalty, and betrayal.</p>
+          <p class="release-date">Coming May 2026</p>
+        </div>
+      </div>
+      
+      <div class="movie">
+        <img src="images/al3aref.jpeg" alt="Movie 5" />
+        <div class="movie-info">
+          <h3>العارف 2</h3>
+          <p>Ahmed Ezz returns as a cyber-spy fighting to save Egypt from digital warfare.</p>
+          <p class="release-date">Coming June 2026</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <footer>
+    <p>© 2025 Galaxy Cinema | Designed by Mark Tamer</p>
+  </footer>
+  
+  
+
+
+  <script>
+    const header = document.getElementById('mainHeader');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 80) {
+        header.classList.add('shrink');
+      } else {
+        header.classList.remove('shrink');
+      }
+
+      if (scrollY > 250) {
+        header.classList.add('fade');
+      } else {
+        header.classList.remove('fade');
+      }
+    });
+  </script>
+
+</body>
+</html>
